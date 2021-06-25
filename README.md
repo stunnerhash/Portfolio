@@ -1,2 +1,3 @@
 # Portfolio
-Demo: stunnerhash.netlify.app
+Deployed on [netlify](stunnerhash.netlify.app) 
+
