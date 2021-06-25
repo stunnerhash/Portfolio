@@ -109,7 +109,7 @@
     };
 
 	var typed = new Typed (".typing", {
-		strings: ["Developer","Designer","Freelancer","Student","Programmer","Problem Solver","Coder"],
+		strings: ["Developer","Designer","Freelancer","Student","Programmer","","Coder"],
 		typeSpeed: 100,
 		backSpeed:50,
 		loop: true
@@ -123,3 +123,4 @@
     })();
 })
 (jQuery);
+	

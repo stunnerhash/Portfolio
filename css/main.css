@@ -1176,11 +1176,9 @@ html.loaded .home-content__main {
     font-size: 14px;
   }
 
-  .go-top {
+	.go-top {
     bottom: 12rem;
-    right: 50%;
-    margin-right: -24px;
-  }
+	}
 
   .go-top::before,
   .go-top::after {
