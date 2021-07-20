@@ -9,11 +9,11 @@
             $("html").removeClass('preload');
             $("html").addClass('loaded');
         });
-    };
+    }; 
     var Animation = function () {
         var SEPARATION = 100,
-            AMOUNTX = 40,
-            AMOUNTY = 50;
+            AMOUNTX = 30,
+            AMOUNTY = 30;
         var camera, scene, renderer;
         var particles, particle, count = 0;
         var windowHalfX = window.innerWidth / 2;
@@ -22,7 +22,7 @@
             mouseY = -windowHalfY;
 
         function init() {
-            camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 1, 1E5);
+            camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 1, 2200);
             camera.position.z = 1000;
 
             scene = new THREE.Scene();
@@ -30,7 +30,7 @@
             particles = new Array();
             var PI2 = Math.PI * 2;
             var material = new THREE.SpriteCanvasMaterial({
-                color: 0xEEEEEE,
+                color: 0xffffff,
                 program: function (context) {
                     context.beginPath();
                     context.arc(0, 0, 0.25, 0, PI2, true);
@@ -51,11 +51,13 @@
             renderer.setSize(window.innerWidth, window.innerHeight);
 
             $('#wave').prepend(renderer.domElement);
+
             $(document).on('mousemove', function (event) {
-                mouseX = event.clientX * 0.5 - windowHalfX;
-                // mouseY = event.clientY * 0.3 - windowHalfY;
+                mouseX = event.clientX * 0.7 - windowHalfX;
+                mouseY = event.clientY * 0.3 - windowHalfY;
             }).trigger('mousemouve');
-            $(window).on('resize', function () {
+   
+			$(window).on('resize', function () {
                 windowHalfX = window.innerWidth / 2;
                 windowHalfY = window.innerHeight / 2;
                 camera.aspect = window.innerWidth / window.innerHeight;
@@ -87,10 +89,10 @@
     }
 	
     var SmoothScroll = function () {
-        $('.smoothscroll').on('click', function (e) {
+        $('.smoothscroll').on('click', function (event) {
             var $target = $(this.hash);
-            e.preventDefault();
-            e.stopPropagation();
+            event.preventDefault();
+            event.stopPropagation();
             $('html, body').stop().animate({
                 'scrollTop': $target.offset().top
             }, 800, 'swing');

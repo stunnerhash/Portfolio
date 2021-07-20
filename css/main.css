@@ -252,7 +252,9 @@ form {
     font-size: 4.2rem;
     margin-bottom: 4.2rem;
   }
-
+  .typing{
+	  font-size: 3.0;
+  }
   .subhead {
     font-size: 1.5rem;
   }
@@ -262,11 +264,17 @@ form {
   .display-1 {
     font-size: 4rem;
   }
+  .typing{
+	  font-size:3.0rem;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   .display-1 {
     font-size: 3.6rem;
+  }
+  .typing{
+	  font-size: 3.0rem;
   }
 }
 
@@ -727,7 +735,7 @@ html.loaded .home-content__main {
   max-width: none;
   width: 100% !important;
   margin: 6rem auto;
-  padding: 0;
+	padding: 0;
 }
 
 .page-projects .list-projects {
