@@ -22,7 +22,7 @@
             mouseY = -windowHalfY;
 
         function init() {
-            camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 1, 2200);
+            camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 100, 2200);
             camera.position.z = 1000;
 
             scene = new THREE.Scene();
