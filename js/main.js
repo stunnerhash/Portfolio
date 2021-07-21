@@ -87,7 +87,27 @@
         }
         return init();
     }
-	
+	var Cursor = function(){
+		const cursor = document.querySelector('.cursor');
+		
+		window.addEventListener('mousemove',(e)=>{
+			cursor.style.left = e.pageX + "px";
+			cursor.style.top = e.pageY + "px";
+			cursor.setAttribute("data-fromTop", cursor.offsetTop - scrollY);
+		});
+		window.addEventListener("scroll", () => {
+			const fromTop = cursor.getAttribute("data-fromTop");
+			cursor.style.top = scrollY + parseInt(fromTop) + "px";
+			console.log(scrollY);
+		});
+		
+		// $("a").mouseover(()=>{
+		// 	$(".cursor").animate({width:"50px",height:"50px"});
+		// });
+		// $("a").mouseout(()=>{
+		// 	$(".cursor").animate({width:"25px",height:"25px"});
+		// });
+	}
     var SmoothScroll = function () {
         $('.smoothscroll').on('click', function (event) {
             var $target = $(this.hash);
@@ -120,6 +140,7 @@
     (function () {
         Preloader();
         Animation();
+		Cursor();
         SmoothScroll();
         AOSStart();
     })();

@@ -13,6 +13,7 @@ body {
   color: #555555;
   margin: 0;
   padding: 0;
+  cursor:none;
 }
 
 * {
@@ -22,6 +23,7 @@ body {
 a {
   color: white;
   transition: all 0.3s ease-in-out;
+  cursor: none;
 }
 
 a:hover,
@@ -145,6 +147,26 @@ table,
 p, ul, ol, dl,
 form {
   margin-bottom: 3rem;
+}
+.cursor{
+	height:25px;
+	width:25px;
+	border-radius: 50%;
+	border:3px solid #aaa;
+	position:absolute;
+	
+	z-index: 1;
+	transform:translate(-50%,-50%);
+	animation: cursorPulse ;
+	pointer-events: none;
+}
+@keyframes cursorPulse {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 #preloader {
