@@ -154,7 +154,7 @@ form {
 	border-radius: 50%;
 	border:3px solid #aaa;
 	position:absolute;
-	
+	/* background:#000000; */
 	z-index: 1;
 	transform:translate(-50%,-50%);
 	animation: cursorPulse ;

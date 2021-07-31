@@ -98,7 +98,6 @@
 		window.addEventListener("scroll", () => {
 			const fromTop = cursor.getAttribute("data-fromTop");
 			cursor.style.top = scrollY + parseInt(fromTop) + "px";
-			console.log(scrollY);
 		});
 		
 		// $("a").mouseover(()=>{
