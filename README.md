@@ -1,2 +1,2 @@
-# [PortFolio](stunnerhash.netlify.app)
+# [PortFolio]
  ## Checkout the [demo](https://stunnerhash.netlify.app) 
